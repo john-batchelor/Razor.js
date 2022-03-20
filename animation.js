@@ -2,12 +2,18 @@ var slide = document.querySelector(".slide");
 var slideContent = slide.querySelector(".content");
 var currentAnimation = null;
 const muteButton = document.querySelector(".mute");
+var playing = false;
 
 
 muteButton.addEventListener("click", function(){
     var audio = document.getElementById("theme");
     audio.muted = !audio.muted;
     muteButton.classList.toggle("muted", audio.muted);
+
+    if(playing == false && audio.muted == false)
+    {
+        startSound("theme");
+    }
 });
 
 var textAnims = [
@@ -218,7 +224,12 @@ function startSound(sound)
 {
     var audio = document.getElementById(sound);
 
-    audio.play();
+    if(audio.muted == false)
+    {
+        audio.play();
+        playing = true;
+    }
+        
 }
 
 export default {
