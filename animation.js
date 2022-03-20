@@ -68,26 +68,26 @@ async function animateGalleries()
     slideContent.classList.add("image");
     var gallery = [
         {
-            image: "/images/Razor1.jpeg",
+            image: "./images/Razor1.jpeg",
         },
         {
-            image: "/images/razor2.png",
+            image: "./images/razor2.png",
         },
         {
-            image: "/images/razor3.jpg",
+            image: "./images/razor3.jpg",
             position: "top center"
         },
         {
-            image: "/images/razor4.jpeg",
+            image: "./images/razor4.jpeg",
         },
         {
-            image: "/images/scott5.jpg"
+            image: "./images/scott5.jpg"
         },
         {
-            image: "/images/outsiders.jpg"
+            image: "./images/outsiders.jpg"
         },
         {
-            image: "/images/nwo.jpg",
+            image: "./images/nwo.jpg",
             position: "top right"
         },
         {
@@ -157,7 +157,7 @@ async function complete()
     var endScreen = document.createElement("div");
 
     var image = document.createElement("img");
-    image.src = "/images/finalImage.jpg";
+    image.src = "./images/finalImage.jpg";
 
     var textWrap = document.createElement("div");
 
